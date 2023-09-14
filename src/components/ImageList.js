@@ -1,5 +1,10 @@
+import ImageShow from './ImageShow';
+
 function ImageList( {images}) {
-    return  <div> ImageList: {images} </div>
+    const renderedImages = images.map((image) => {
+            return <ImageShow key={Math.random()} image={image} />;
+    });
+    return  <div>{renderedImages} </div>
      }
 
 export default ImageList;
